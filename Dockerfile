@@ -2,7 +2,7 @@ FROM python:3.9
 
 RUN git clone -b develop https://github.com/crarojasca/event_scheduler_ABC.git
 
-WORKDIR /app
+WORKDIR /event_scheduler_ABC
 
 RUN pip install -r requirements.txt
 

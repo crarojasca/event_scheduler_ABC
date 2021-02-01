@@ -1,6 +1,6 @@
 FROM python:3.9
 
-RUN git clone -b develop git@github.com:crarojasca/event_scheduler_ABC.git
+RUN git clone -b develop https://github.com/crarojasca/event_scheduler_ABC.git
 
 WORKDIR /app
 

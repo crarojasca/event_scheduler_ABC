@@ -4,4 +4,105 @@
 <h1 class="title">
   Welcome, {{ name }}!
 </h1>
+
+<button class="button is-success is-large" data-toggle="modal" data-target="#EventModal">
+  <span class="icon is-large">
+    <i class="fas fa-plus"></i>
+  </span>
+</button>
+
+<div class="modal" id="EventModal" role="dialog">
+  <div class="modal-background" role="document"></div>
+  <div class="modal-card">
+    <form method="POST" action="/event">
+      <!-- <header class="modal-card-head">
+        <p class="modal-card-title">Event</p>
+        <button class="delete" data-dismiss="modal" aria-label="close"></button>
+      </header> -->
+      <!-- <section class="modal-card-body"> -->
+
+        <div class="field">
+          <div class="control">
+            <div class="select is-primary">
+              <select type="category" name="category" placeholder="Category" autofocus="">
+                <option>Conference </option>
+                <option>Seminar</option>
+                <option>Congress</option>
+                <option>Course</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="field">
+          <div class="control">
+              <input class="input is-primary" type="place" name="place" placeholder="Place" autofocus="">
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+              <input class="input is-primary" type="adress" name="adress" placeholder="Adress" autofocus="">
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <div class="form-group row">
+              <label for="date_start" class="col-2 col-form-label">Date Start</label>
+              <div class="col-10">
+                <input class="form-control" type="date" value="2021-02-04" id="date_start" type="date_start" name="date_start" autofocus="">
+              </div>
+            </div>
+          </div>
+        </div>
+          
+        <div class="field">
+          <div class="control">
+            <div class="form-group row">
+              <label for="date_end" class="col-2 col-form-label">Date End</label>
+              <div class="col-10">
+                <input class="form-control" type="date" value="2021-02-04" id="date_end" type="date_end" name="date_end" autofocus="">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+
+      <!-- </section> -->
+      <!-- <footer class="modal-card-foot"> -->
+      
+      <!-- </footer> -->
+      <!-- <button class="button is-block is-info is-large is-fullwidth">Login</button> -->
+      <button class="button is-success" >Create</button>
+    </form>
+  </div>
+</div>
+<!-- 
+<button type="button" class="btn btn-primary" >
+  Launch demo modal
+</button> -->
+
+<!-- <div class="modal fade" id="EventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Event</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div> -->
+</div>
+
 {% endblock %}
